@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface FoodProps {
+  available: boolean;
+}
+
+export const Container = styled.div<FoodProps>`
   background: #f0f0f5;
   border-radius: 8px;
 
@@ -8,6 +12,7 @@ export const Container = styled.div`
     background: #ffb84d;
     border-radius: 8px 8px 0px 0px;
     height: 192px;
+   
     overflow: hidden;
     transition: 0.3s opacity;
     text-align: center;
@@ -21,6 +26,8 @@ export const Container = styled.div`
     img {
       pointer-events: none;
       user-select: none;
+      width: 100%;
+      max-width: 406px;
     }
   }
 
